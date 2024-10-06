@@ -1,3 +1,3 @@
-# goit-markup-hw-05
+# goit-markup-hw-06
 
-GoIT School / Full Stack Course / Homework#5
+GoIT School / Full Stack Course / Homework#6
