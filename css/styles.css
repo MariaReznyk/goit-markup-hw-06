@@ -42,6 +42,19 @@ button {
     cursor: pointer;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* header */
 
 .page-header {
@@ -300,5 +313,218 @@ button {
 @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
     .section-hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop@2x.jpg);
+    }
+}
+
+/* advantages */
+
+@media screen and (max-width: 1158px) {
+    .advantages-item-icon {display: none;}
+}
+
+.section-advantages {
+    padding: 96px 0;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.advanatges-item-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+.advantages-item-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+    .advantages-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .advanatges-item-title {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .advantages-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .advantages-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .advanatges-item-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .advantages-item-text {
+        font-weight: 400;
+    }
+
+    .advantages-item-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4fd;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        height: 112px;
+        margin-bottom: 8px;
+    }
+}
+
+/* team */
+
+.section-team {
+    background-color: #f4f4fd;
+    padding: 96px 0;
+}
+
+.section-team .container {
+    padding: 0 24px;
+}
+
+.team-title {
+    display: block;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+
+.team-item {
+    width: 264px;
+    background-color: #fff;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    border-radius: 0 0 4px 4px;
+}
+
+.team-item-card {
+    padding: 32px 16px;
+}
+
+.team-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-item-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team-item-card .social-list {
+    gap: 24px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+}
+
+.social-list-icon {
+    fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+    .section-team .container {
+        padding: 0 108px;
+    }
+
+
+    
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+
+    .social-list-link {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .team-item-card .social-list-link:focus {
+    background-color: #404bbf;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .section-team {
+        padding: 120px 0;
+    }
+
+    .section-team .container {
+        padding: 0;
+    }
+
+    .team-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .team-item-card .social-list-link:hover {
+        background-color: #404bbf;
     }
 }
