@@ -876,11 +876,12 @@ address {font-style: normal;}
 
 @media screen and (min-width: 768px) {
     .page-footer {
-        padding: 96px 108px;
+        padding: 96px 0;
     }
 
     .footer-container {
         padding: 0;
+        width: 552px;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: baseline;
@@ -926,6 +927,7 @@ address {font-style: normal;}
 
     .footer-container {
         padding: 0 15px;
+        width: 100%;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
